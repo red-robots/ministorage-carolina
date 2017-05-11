@@ -50,10 +50,10 @@ get_header(); ?>
 						<div class="contact-info2 block">
 							<h3>CONTACT</h3>
 							<?php 
-							if($contactPhone) echo '<div class="item">p:'.$contactPhone.'</div>';
+							if($contactPhone) echo '<div class="item">p:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactPhone).'" class="label-phone cat-location'.get_the_ID().'">'.$contactPhone.'</a></div>';
 							if($contactFax) echo '<div class="item">f:'.$contactFax.'</div>';
-							if($contactTollFree) echo '<div class="item">toll free:'.$contactTollFree.'</div>';
-							if($contactEmail) echo '<div class="item email">e: <a href="'.$spamer.'">'.$spamer.'</a></div>';
+							if($contactTollFree) echo '<div class="item">toll free:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactTollFree).'>" class="label-toll cat-location'. get_the_ID().'">'.$contactTollFree.'</a></div>';
+							if($contactEmail) echo '<div class="item email">e: <a href="'.$spamer.'" class="label-email cat-location<?php echo get_the_ID();?>">'.$spamer.'</a></div>';
 							 ?>
 						</div>
 					</div>
