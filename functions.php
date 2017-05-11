@@ -1,46 +1,71 @@
-<?php // Opening PHP tag - nothing should be before this, not even whitespace
-
-// Custom Function to Include
-function favicon_link() {
-    echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
-}
-add_action( 'wp_head', 'favicon_link' );
-
-// Changing WordPress admin Menu Names
-function change_post_menu_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Locations';
-    $submenu['edit.php'][5][0] = 'Locations';
-    $submenu['edit.php'][10][0] = 'Add a Location';
-   // $submenu['edit.php'][15][0] = 'Status'; // Change name for categories
-    //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
-    echo '';
-}
-function change_post_object_label() {
-        global $wp_post_types;
-        $labels = &$wp_post_types['post']->labels;
-        $labels->name = 'Locations';
-        $labels->singular_name = 'Locations';
-        $labels->add_new = 'Add a Location';
-        $labels->add_new_item = 'Add a Location';
-        $labels->edit_item = 'Edit Locations';
-        $labels->new_item = 'Locations';
-        $labels->view_item = 'View Locations';
-        $labels->search_items = 'Search Locations';
-        $labels->not_found = 'No Locations found';
-        $labels->not_found_in_trash = 'No Locations found in Trash';
-    }
-    add_action( 'init', 'change_post_object_label' );
-    add_action( 'admin_menu', 'change_post_menu_label' );
-?>
 <?php
-    add_action( 'init', 'register_my_menus' );
-function register_my_menus() {
-    register_nav_menus(
-        array(
-            'secondary-menu' => __( 'Secondary Menu' )
-        )
-    );
-}
-?>
+/**
+ * ACStarter functions and definitions.
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package ACStarter
+ */
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/theme-setup.php';
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/scripts.php';
+
+/**
+ * Custom Post Types.
+ */
+require get_template_directory() . '/inc/post-types.php';
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Post Pagination
+ */
+require get_template_directory() . '/inc/pagination.php';
+
+/**
+ * Social
+ */
+// require get_template_directory() . '/inc/social-media-links.php';
+
+/**
+ * Theme Specific additions.
+ */
+require get_template_directory() . '/inc/theme.php';
+
+/**
+ * Block & Disable All New User Registrations & Comments Completely.
+ * Description:  This simple plugin blocks all users from being able to register no matter what, 
+ *               this also blocks comments from being able to be inserted into the database.
+ */
+require get_template_directory() . '/inc/block-all-registration-and-comments.php';
+
+/**
+ * Customizer additions.
+ */
+// require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+// require get_template_directory() . '/inc/jetpack.php';
+

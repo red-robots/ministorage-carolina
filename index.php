@@ -16,148 +16,143 @@
 
 get_header(); ?>
 
-<div id="row1">
+<section class="intro">
+
+  <div class="wrapper">
+    
+
+    <div id="row1-box2">
+      <div class="row1box2-heading">Helpful People, Convenient Storage</div>
+      <ul>
+        <li>Monthly & Long Term Rentals</li>
+        <li>Unit Sizes To Suit Your Needs</li>
+        <li>Packing Supplies</li>
+        <li>Super Competitive Rates!</li>
+      </ul>
+      <div id="specials">
+        <a href="<?php bloginfo('url'); ?>/specials">
+          See Our Specials
+        </a>
+      </div>
+    </div>
+    <!-- row1-box2 -->
+
+  <div id="find-location-box">
+    <div id="find-location-box-header">Find A Location</div>
+    <div id="find-location-menu">
+
+      <div id="find-location-text2">
+        View Storage Unit Sizes,  Make a Reservation, Make a Payment, <br>
+        View Map of Locations, See Features, Contact Us & More!
+      </div>
+
+      <div class="drop-container">
+        <div id="dropdown-text">LOCATIONS: </div>
+          <div id="dropdown-menu" class="home">  
+            <nav>
+              <ul>
+                <li class="main-li-width">Choose from our convenient locations
+                <?php $wp_query = new WP_Query();
+                      $wp_query->query(array(
+                        'post_type'=>'location',
+                        'posts_per_page' => -1
+                      )); ?>
+                  <ul>
+                    <?php while ($wp_query -> have_posts()) : $wp_query -> the_post(); ?>
+                      <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                    <?php endwhile;?>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- drop container -->
+
+        <div class="butn-cont">
+          <div class="button-location ">
+            <a href="<?php bloginfo('url'); ?>/our-storage-locations/">GO</a>
+          </div>
+        </div>
+      </div>  
+      <!-- dropdown-text -->
+    </div>
+    <!-- find-location-box -->
+    </div>
+    <!-- wrapper -->
+</section>
 
 
+<section class="boxes">
+  <?php 
+  $recent = new WP_Query("page_id=73"); 
+  while($recent->have_posts()) : $recent->the_post();?>
+    <div class="box box-third">
+      <h2 class="heading1">GETTING STARTED:</h2>
+        <h3><?php the_field('box_1_heading'); ?></h3>
+        <p><?php the_field('box_1_text'); ?></p>
+        <?php 
+        $image = get_field('box_1_image');
+        if( !empty($image) ): ?>
+          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
+        <?php endif; ?>
+      
+        <div class="button-lg button-bottom">
+          <a href="<?php bloginfo('url'); ?>/getting-started/how-much-space-do-you-need/">GO</a>
+        </div>
+    </div>
+    <!-- home-row2-box -->
 
-<div id="row1-box1"><a href="<?php bloginfo('url'); ?>/specials"></a></div>
+  <div class="box box-third">
+    <h2 class="heading2">SEARCH BY FEATURES:</h2>
+      <h3><?php the_field('box_2_heading'); ?></h3>
+      <p><?php the_field('box_2_text'); ?></p>
+      <?php 
+      $image = get_field('box_2_image');
+      if( !empty($image) ): ?>
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
+      <?php endif; ?>
+      <div class="button-lg button-bottom">
+        <a href="<?php bloginfo('url'); ?>/features-amenities/">GO</a>
+      </div>
+  </div>
+  <!-- home-row2-box -->
 
-<div id="row1-box2">
-<div class="row1box2-heading">Helpful People, Convenient Storage</div>
-  <ul>
-    <li>Monthly & Long Term Rentals
-      </li>
-    <li>Unit Sizes To Suit Your Needs </li>
-    <li>Packing Supplies </li>
-    <li>Super Competitive Rates! </li>
-  </ul>
-</div>
-
-
-<div id="find-location-box">
-
-<div id="find-location-box-header">Find A<br>Location</div>
-
-<div id="find-location-menu">
-
-<div id="find-location-text2">View Storage Unit Sizes,  Make a Reservation, Make a Payment, <br>
-  View Map of Locations, See Features, Contact Us & More!</div>
-
-<div id="dropdown-text">LOCATIONS: </div>
-<div id="dropdown-menu">	
-<nav>
-    <ul>
-    <li class="main-li-width">Choose from our convenient locations
-
- <?php $the_query = new WP_Query( 'showposts=-1' ); ?>
-
-<ul><?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-
- <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-
- <?php endwhile;?>
-
-
-
-</ul>
-</li>
-</ul></nav></div>
-
-<div class="button-sm margin1"><a href="<?php bloginfo('url'); ?>/our-storage-locations/">GO</a></div>
-
-</div>		
-</div>
-</div>
-
-<!-- </div> -->
-
-
-
-
-
-<div id="home-row2">
-
-<?php $recent = new WP_Query("page_id=73"); while($recent->have_posts()) : $recent->the_post();?>
-
-
-<div class="home-row2-box">
-  <h2 class="heading1">GETTING STARTED:</h2>
- 
- <div class="home-row2-box-content"> 
-<h3><?php the_field('box_1_heading'); ?></h3>
-
-<p><?php the_field('box_1_text'); ?>
-
-
-<p><?php 
-$image = get_field('box_1_image');
-if( !empty($image) ): ?>
-    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
-<?php endif; ?>
-
-
-
-
-<div class="button-lg button-bottom"><a href="<?php bloginfo('url'); ?>/getting-started/how-much-space-do-you-need/">GO</a></div>
-
-</div>
-
-</div>
-
-<div class="home-row2-box">
-  <h2 class="heading2">SEARCH BY FEATURES:</h2>
-<div class="home-row2-box-content"> 
-<h3><?php the_field('box_2_heading'); ?></h3>
-
-<p><?php the_field('box_2_text'); ?>
-
-
-<p><?php 
-$image = get_field('box_2_image');
-if( !empty($image) ): ?>
-    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
-<?php endif; ?>
-
-
-
-
-<div class="button-lg button-bottom"><a href="<?php bloginfo('url'); ?>/features-amenities/">GO</a></div>
-
-</div>
-</div>
-
-<div class="home-row2-box2">
-  <h2 class="heading3">REQUEST A RESERVATION NOW: </h2>
-<div class="home-row2-box-content"> 
-<h3><?php the_field('box_3_heading'); ?></h3>
-
-<p><?php the_field('box_3_text'); ?>
-
-
-<p><?php 
-$image = get_field('box_3_image');
-if( !empty($image) ): ?>
-    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
-<?php endif; ?>
-
-
-
-
-<div class="button-lg button-bottom"><a href="<?php bloginfo('url'); ?>/rent-space/">GO</a></div>
-
-</div>
-</div>
-
-<?php endwhile; wp_reset_postdata(); // end of the loop. ?>
-</div>
+  <div class="box box-third">
+    <h2 class="heading3">REQUEST A RESERVATION NOW: </h2>
+      <h3><?php the_field('box_3_heading'); ?></h3>
+      <p><?php the_field('box_3_text'); ?></p>
+      <?php 
+      $image = get_field('box_3_image');
+      if( !empty($image) ): ?>
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
+      <?php endif; ?>
+      <div class="button-lg button-bottom">
+        <a href="<?php bloginfo('url'); ?>/rent-space/">GO</a>
+      </div>
+  </div>
+  <!-- home-row2-box -->
+  <?php endwhile; wp_reset_postdata(); // end of the loop. ?>
+  
+</section>
 
 <div id="row3">
 
 <div id="row3-left">
 <h2>Storage Locations</h2>
-<?php $recent = new WP_Query("page_id=73"); while($recent->have_posts()) : $recent->the_post();?>
-<p><?php the_field('storage_locations'); ?>
-<?php endwhile; wp_reset_postdata(); // end of the loop. ?>
+
+<?php $wp_query = new WP_Query();
+    $wp_query->query(array(
+      'post_type'=>'location',
+      'posts_per_page' => -1
+    )); ?>
+    <ul>
+    <?php while ($wp_query -> have_posts()) : $wp_query -> the_post(); ?>
+      <li>
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+      </li>
+    <?php endwhile; wp_reset_postdata(); // end of the loop. ?>
+    </ul>
 </div>
 
 <div id="row3-right">
@@ -172,7 +167,7 @@ if( !empty($image) ): ?>
 
 </div>
 
-	
+  
 
 
 <?php get_footer(); ?>

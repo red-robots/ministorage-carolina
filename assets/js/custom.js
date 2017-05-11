@@ -17,6 +17,19 @@ jQuery(document).ready(function ($) {
         $(this).addClass("active");
         }
 	});
+
+	/*
+	*
+	*	Responsive iFrames
+	*
+	------------------------------------*/
+	var $all_oembed_videos = $("iframe[src*='youtube']");
+	
+	$all_oembed_videos.each(function() {
+	
+		$(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
+ 	
+ 	});
 	
 	/*
 	*
@@ -27,6 +40,25 @@ jQuery(document).ready(function ($) {
 		animation: "slide",
 	}); // end register flexslider
 	
+
+	 // The slider being synced must be initialized first
+	  $('#carousel').flexslider({
+	    animation: "slide",
+	    controlNav: false,
+	    animationLoop: false,
+	    slideshow: false,
+	    itemWidth: 100,
+	    itemMargin: 5,
+	    asNavFor: '#slider'
+	  });
+	 
+	  $('#slider').flexslider({
+	    animation: "slide",
+	    controlNav: false,
+	    animationLoop: false,
+	    slideshow: false,
+	    sync: "#carousel"
+	  });
 	/*
 	*
 	*	Colorbox

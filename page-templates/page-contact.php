@@ -16,82 +16,56 @@
 
 get_header(); ?>
 
+<div class="wrapper">
+	<div id="content" role="main">
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content', 'page' ); ?>
+		<?php endwhile; // end of the loop. ?>
 
-		<div id="content" role="main">
-        
+		<section class="contact-table">               
+			<?php $wp_query = new WP_Query();
+					$wp_query->query(array(
+					'post_type'=>'location',
+					'posts_per_page' => -1
+				)); ?>
+					<?php while ($wp_query -> have_posts()) : $wp_query -> the_post(); 
 
+					$contactPhone = get_field('contact_phone');
+					$contactFax = get_field('contact_fax');
+					$contactTollFree = get_field('contact_toll_free');
+					$contactEmail = get_field('contact_email');
+					$spamer = antispambot($contactEmail);
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-                <?php endwhile; // end of the loop. ?>
-                
-            
-                
- <div id="contact-table">               
-               
+		
 
-<?php query_posts('category_name=uncategorized&showposts=20'); ?>
-
-
-
-<ul><?php while (have_posts()) : the_post(); ?>
-
- <li>
- 
- <div class="feature-title2"><div class="feature-title-heading2"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div></div>
- 
- <div class="location-info">
- 
-
-
-<div class="contact-info2"><h3>ADDRESS</h3>
-<?php the_field("address"); ?></div>
-
-<div class="contact-info2"><h3>CONTACT</h3>
-<?php the_field("contact"); ?></div>
-
-
- 
- </div>
- 
- </li>
-
- <?php endwhile;?>
-
-
- </ul>
- <?php wp_reset_postdata(); ?>
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-                
-                </div>
-                
-                
+		?>
+						
+				<div class="contact-block">
+					<h2 class="item"><?php the_title(); ?></h2>
+					<div class="location-info ">
+						<div class="contact-info2 block">
+							<h3>ADDRESS</h3>
+							<?php the_field("address"); ?>
+						</div>
+						<div class="contact-info2 block">
+							<h3>CONTACT</h3>
+							<?php 
+							if($contactPhone) echo '<div class="item">p:'.$contactPhone.'</div>';
+							if($contactFax) echo '<div class="item">f:'.$contactFax.'</div>';
+							if($contactTollFree) echo '<div class="item">toll free:'.$contactTollFree.'</div>';
+							if($contactEmail) echo '<div class="item email">e: <a href="'.$spamer.'">'.$spamer.'</a></div>';
+							 ?>
+						</div>
+					</div>
+					<div class="goto"><a href="<?php the_permalink() ?>">More Information</a></div>
+					
+				</div>
+				<?php endwhile;?>
 			
-			
-  
-            
-            
+			<?php wp_reset_postdata(); ?>
+		</section>
 
-
-
-  
-      
-            
-
-		</div><!-- #content -->
-
+	</div><!-- #content -->
+</div>
+<!-- wrapper -->
 <?php get_footer(); ?>

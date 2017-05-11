@@ -37,112 +37,64 @@
 <link rel="manifest" href="<?php bloginfo('template_url'); ?>/images/favicons/manifest.json">
 <meta name="theme-color" content="#ffffff">
 
-
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
-
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 
 <?php the_field('google_analytics', 'option'); ?>
-
-<script language="javascript" type="text/javascript">
-function showHide(shID) {
-   if (document.getElementById(shID)) {
-      if (document.getElementById(shID+'-show').style.display != 'none') {
-         document.getElementById(shID+'-show').style.display = 'none';
-         document.getElementById(shID).style.display = 'block';
-      }
-      else {
-         document.getElementById(shID+'-show').style.display = 'inline';
-         document.getElementById(shID).style.display = 'none';
-      }
-   }
-}
-</script>
-
-<script type="text/javascript">          
-  		function swap(image) {
-		       document.getElementById("mainimage").src = image.href;          
-			   }      
-               </script>
 
 </head>
 
 <body <?php body_class(); ?>>
 
 
-
-
-
-
-<?php if(is_home()) { ?>
-
-                <div id="bg-body-home">
-
-            <?php } else { ?>
-
-                <div id="sub-wrapper">
-                
-            <?php } ?>
-
-
-
-
 <div id="bg-body1">
+  <div id="page" class="hfeed site">
 
-<div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<div id="logo"><div id="logo-image"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" border="0"></a></div></div>
-            
-            <!-- new logo? -->
-<div id="header-content">    
 
-<div id="header-row1">
+    <header id="masthead" class="site-header" role="banner">
+    <div class="wrapper">
+        <?php if(is_home()) { ?>
+        <h1 class="logo">
+        <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+        </h1>
+        <?php } else { ?>
+        <div class="logo">
+          <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+        </div>
+        <?php } ?>
 
-<div id="specials-mobile"><a href="<?php bloginfo('url'); ?>/specials">See Our Specials</a></div>
-
-  <div id="gift-button"><a href="<?php bloginfo('url'); ?>/contact-us">Contact Us</a></div></div>
- 
-            
-            <div id="header-text"><h1>The Mini Storage Center</h1>
+        <div id="header-content">    
+          <div id="header-row1">
+            <div class="contact-us">
+              <a href="<?php bloginfo('url'); ?>/contact-us">Contact Us</a>
+            </div>
+          </div>
+          <div id="header-text">
+            <h1>The Mini Storage Center</h1>
             Self-Storage Space For Individuals & Businesses
-<br>Convenient Locations in North Carolina & South Carolina</div>
-            
-            
-            
-</div>            
-			
-		</hgroup>
+            <br>Convenient Locations in North Carolina & South Carolina
+          </div>
+        </div>            
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-        <div id="site-navigation-position">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+        <div class="nav-wrap">
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+              <?php esc_html_e( 'MENU', 'acstarter' ); ?>
+            </button>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+          </nav><!-- #site-navigation -->
 
-<div id="payment-button"><a href="<?php bloginfo('url'); ?>/make-a-payment/">Make a Payment</a></div>   
+          <div id="payment-button">
+            <a href="<?php bloginfo('url'); ?>/make-a-payment/">Make a Payment</a>
+          </div>   
+        </div>
 
-		</div></nav><!-- #site-navigation -->
+      <?php if ( get_header_image() ) : ?>
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+      <?php endif; ?>
+    </div>
+    <!-- wrapper -->
+    </header><!-- #masthead -->
 
-		<?php if ( get_header_image() ) : ?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
-	</header><!-- #masthead -->
-
-	<div id="main" class="wrapper">
+    <div id="main" class="">
     
-
-<div id="mobile-nav">
- 
-<div id="subnav">
- 
-      <p><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">Menu</a></p>
-      <div id="example" class="nav-more">
-         <p><?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?></p>
-         <p><a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">[x] close</a></p>
-      </div>
-
- 
- </div>   
-
-</div><!-- mobile nav-->

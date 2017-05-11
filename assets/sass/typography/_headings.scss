@@ -5,3 +5,8 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content h1 {
 	font-size: 30px;
 }
+h1.entry-title {
+	color: $color-orange;
+	font-size: 1.571428571rem;
+	text-transform: uppercase;
+}

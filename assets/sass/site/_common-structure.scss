@@ -1,42 +1,36 @@
 * { -webkit-hyphens: none; }
 div {
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
+	
 
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
 }
 .clear {clear: both;}
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
-	
+	position: relative;
+	clear: both;
 	@media screen and (min-width: $tabwidth) {
-		width: 100%;
+		width: 96%;
+		padding: 0;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		width: 90%;
 		padding: 0px;
 	}
 }
-
-.content-area {
+.nav-wrap {
+	width: 100%;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+.content-area, .site-content {
 	width: 100%;
 	margin: 0px auto;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 66%;
+		width: 65.104166667%;
 		float: left;
 		margin: 0;
 	}
@@ -50,7 +44,7 @@ div {
 	margin: 0px auto;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 26%;
+		width: 26.041666667%;
 		float: right;
 		margin: 0;
 	}
@@ -61,32 +55,341 @@ div {
 
 /* Logo */
 .logo , h1.logo {
-	width: 300px;
-	height: 200px;
-	background-image: url(images/logo.png);	
+	width: 282px;
+	height: 115px;
+	background: {
+		image: url(images/logo.png);	
+		size: cover;
+	}
 	margin: 10px auto;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
+		width: 282px;
+		height: 115px;
 		float: left;
-		margin: 0;
+		margin: 20px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
 }
 .logo a, h1.logo a {
-	width: 300px;
-	height: 200px;
+	width: 282px;
+	height: 115px;
 	display: block;
 	text-indent: -9000px;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
+		width: 282px;
+		height: 115px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
+}
+#main {
+	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+
+/* Header */
+.site-header {
+				padding-left: 0px;
+				padding-top: 0px;
+				padding-right: 0px;
+				padding-bottom: 0px;
+}
+.site-header h1,
+.site-header h2 {
+	text-align: center;
+}
+.site-header h1 a,
+.site-header h2 a {
+	color: #515151;
+	display: inline-block;
+	text-decoration: none;
+}
+.site-header h1 a:hover,
+.site-header h2 a:hover {
+	color: #21759b;
+}
+.site-header h1 {
+	font-size: 24px;
+	font-size: 1.714285714rem;
+	line-height: 1.285714286;
+	margin-bottom: 14px;
+	margin-bottom: 1rem;
+}
+.site-header h2 {
+	font-weight: normal;
+	font-size: 13px;
+	font-size: 0.928571429rem;
+	line-height: 1.846153846;
+	color: #757575;
+}
+.header-image {
+	margin-top: 24px;
+	margin-top: 1.714285714rem;
+}
+#masthead {
+	width: 100%;
+	float: left;
+	position: relative;
+	background: {
+		position: bottom;
+		image: url(images/bg-body2.png);
+		size: cover;
+		repeat: no-repeat;
+	}
+}
+
+#payment-button {
+	width: auto;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	z-index: 8000;	
+	display: inline-block;
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		font-size: 13px;
+	}
+	@media screen and (min-width: $midwidth) {
+		font-size: 15px;
+	}
+	a {
+		background-color: $color-green;
+		border-radius: 7px 7px 0 0;
+		padding: 10px 20px;
+		display: block;
+	}
+}
+
+
+
+#payment-button a:link { color: #ffffff; text-decoration: none; }
+#payment-button a:visited { color: #ffffff; text-decoration: none; }
+#payment-button a:hover { color: #f78f6a; text-decoration: none; }
+
+
+
+
+#header-content {
+	width: 100%;
+	float: right;
+	@media screen and (min-width: $tabwidth) {
+		width: 50%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		// width: 730px;
+	}
+}
+
+#header-row1 {
+	width: 100%;
+	margin: 20px auto;
+	float: right;
+	text-align: center;
+	@media screen and (min-width: $tabwidth) {
+		margin: 0;
+	}
+}
+
+#icons {
+	width: 130px;
+	height: 29px;
+	float: right;
+	padding-top: 4px;
+}
+#icon-linkedin,
+#icon-twitter,
+#icon-facebook {
+	width: 30px;
+	height: 29px;
+	float: left;
+	a {
+		width: 30px;
+		height: 29px;
+		float:left;
+		background-position: 0px 0;	
+		&:hover {
+			background-position: -30px 0;	
+		}
+	}
+}
+#icon-facebook a {
+	background-image: url(images/icon-facebook.jpg);
+}
+#icon-twitter a {
+	background-image: url(images/icon-twitter.jpg);
+}
+#icon-linkedin a {
+	background-image: url(images/icon-linkedin.jpg);
+}
+#gift-button {
+	width: auto;
+	float: right;
+	font-size: 18px;
+	text-align: center;
+	
+	a { 
+		color: #ffffff; 
+		text-decoration: none;
+		display: block;
+		padding: 7px 20px;
+		border-radius: 0px 0px 7px 7px;
+		background-color: $color-green;
+		&:hover { 
+			color: #f78f6a;
+		}
+	}
+	
+}
+.contact-us {
+	width: auto;
+	display: inline-block;
+	font-size: 18px;
+	text-align: center;
+	@media screen and (min-width: $tabwidth) {
+		float: right;
+	}
+	a { 
+		color: $color-green;
+		&:hover { 
+			color: #f78f6a;
+		}
+		@media screen and (min-width: $tabwidth) {
+			color: #ffffff; 
+			text-decoration: none;
+			display: block;
+			padding: 7px 20px;
+			border-radius: 0px 0px 7px 7px;
+			background-color: $color-green;
+		}
+	}
+	
+}
+#header-row2 {
+	width: 100%;
+	height: 59px;
+	float: right;
+	text-align: right;
+	color: #1882B0;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#header-text {
+	width: 100%;
+	float: right;
+	text-align: center;
+	color: #D62A11;
+	font-size: 14px;
+	@media screen and (min-width: $tabwidth) {
+		font-size: 14px;
+		text-align: right;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 18px;
+	}
+	h1 {
+		color: #000000;
+		font-size: 25px;
+		margin: 0px;
+		text-align: center;	
+		font-family: 'Open Sans', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 28px;
+			text-align: right;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 37px;
+		}
+	}
+}
+
+#footer-bg {
+	width: 100%;
+	height: 100px;
+	float: left;
+	color: rgba(#fff, .4);
+	text-align: center;
+	background-color: $color-dark-blue;
+	border-top: 1px solid $color-electric-blue;
+	a {
+		color: rgba(#fff, .4);
+		@include transition(all ease .3s);
+		&:hover {
+			color: rgba(#fff, 1);
+		}
+	}
+}
+footer#colophon {
+	width: 90%;
+	padding: 20px 0 20px 0;
+	text-align: center;
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+}
+.entry-page-image {
+	margin-bottom: 14px;
+	margin-bottom: 1rem;
+}
+.template-front-page .site-content article {
+	border: 0;
+	margin-bottom: 0;
+}
+.template-front-page .widget-area {
+	clear: both;
+	float: none;
+	width: auto;
+	padding-top: 24px;
+	padding-top: 1.714285714rem;
+	border-top: 1px solid #ededed;
+}
+.template-front-page .widget-area .widget li {
+	margin: 8px 0 0;
+	margin: 0.571428571rem 0 0;
+	font-size: 13px;
+	font-size: 0.928571429rem;
+	line-height: 1.714285714;
+	list-style-type: square;
+	list-style-position: inside;
+}
+.template-front-page .widget-area .widget li a {
+	color: #757575;
+}
+.template-front-page .widget-area .widget li a:hover {
+	color: #21759b;
+}
+.template-front-page .widget-area .widget_text img {
+	float: left;
+	margin: 8px 24px 8px 0;
+	margin: 0.571428571rem 1.714285714rem 0.571428571rem 0;
+}
+section.page-content-col {
+	width: 100%;
+	float: left;
+	@media screen and (min-width: $tabwidth) {
+		width: 40%;
+	}
+
+}
+section.page-maps {
+	width: 100%;
+	float: right;
+	@media screen and (min-width: $tabwidth) {
+		width: 45%;
+	}
+
 }

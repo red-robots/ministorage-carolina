@@ -12,34 +12,54 @@ get_header(); ?>
 
 <div class="wrapper">
 <div id="content" role="main">
-<div class="entry-content">
-<?php while ( have_posts() ) : the_post(); ?>
-	<div id="locations-dropdown">
-		<div id="dropdown-menu">	
-			<nav>
-				<div id="locations-dropdown-header">VIEW ANOTHER LOCATION</div>
-				<ul>
-					<li class="main-li-width">Choose from our convenient locations
-					<?php $the_query = new WP_Query( 'showposts=-1' ); ?>
-					<ul>
-						<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-							<li>
-								<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-							</li>
-						<?php endwhile;?>
-					</ul>
-					 <?php wp_reset_postdata(); ?>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>           
-            
 
-<h2>Our Storage Locations:</h2>
-<h1><?php the_title(); ?></h1>
-<?php the_content(); ?>
-            
+<?php while ( have_posts() ) : the_post(); 
+
+	$images = get_field('gallery');
+	$contactPhone = get_field('contact_phone');
+	$contactFax = get_field('contact_fax');
+	$contactTollFree = get_field('contact_toll_free');
+	$contactEmail = get_field('contact_email');
+	$spamer = antispambot($contactEmail);
+	$content = get_the_content();
+
+endwhile; // end of the loop. ?>
+	<div class="widget-area">
+		<div id="locations-dropdown">
+			<div id="dropdown-menu">	
+				<nav>
+					<div id="locations-dropdown-header">VIEW ANOTHER LOCATION</div>
+					<ul>
+						<li class="main-li-width">Choose from our convenient locations
+						<?php $wp_query = new WP_Query();
+								$wp_query->query(array(
+								'post_type'=>'location',
+								'posts_per_page' => -1
+							)); ?>
+						<ul>
+							<?php while ($wp_query -> have_posts()) : $wp_query -> the_post(); ?>
+								<li>
+									<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+								</li>
+							<?php endwhile;?>
+						</ul>
+						 <?php wp_reset_postdata(); ?>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>           
+	</div>         
+	<div class="site-content entry-content">
+		<h2>Our Storage Locations:</h2>
+			<header class="entry-header">
+				<h1 class="entry-title"><?php the_title( '' ); ?></h1>
+			</header>
+			<?php echo $content; ?>
+	</div>
+	<!-- site content -->
+
+<section class="location-details">
 <?php echo do_shortcode("[tabby title='Location, Contact & Hours']"); ?>
 
 <section class="location-contact">
@@ -47,19 +67,28 @@ get_header(); ?>
 	<div class="contact-info"><?php the_field("address"); ?></div>
 
 	<h3>CONTACT</h3>
-	<div class="contact-info"><?php the_field("contact"); ?></div>
+	<div class="contact-info">
+	<?php 
+		
+
+		if($contactPhone) echo '<div class="item">p:'.$contactPhone.'</div>';
+		if($contactFax) echo '<div class="item">f:'.$contactFax.'</div>';
+		if($contactTollFree) echo '<div class="item">toll free:'.$contactTollFree.'</div>';
+		if($contactEmail) echo '<div class="item">e: <a href="'.$spamer.'">'.$spamer.'</a></div>';
+	 ?>
+	</div>
 
 	<h3>HOURS & ACCESS</h3>
 	<div class="contact-info"><?php the_field("hours_access"); ?></div>
 </section>
 
 <section class="location-desc">
-	
+	<?php the_field('location_description'); ?>
 </section>
 
-<div id="locations-map">
+<section class="location-map">
 	<?php the_field("map"); ?>
-</div>
+</section>
 
 
 
@@ -236,34 +265,53 @@ if( ($amenity11) )
 <?php echo do_shortcode("[tabbyending]"); ?>      
 
 
-<div id="locations-gallery">
+<section class="gallery">
+	<?php 
 
-<div id="photo1">
-	<img src="<?php the_field("location_default_photo"); ?>" name="mainimage" width="450" height="300" id="mainimage">
-</div>
+	
+	if( $images ): ?>
+	
+	<div id="slider" class="flexslider">
+	  <ul class="slides">
+	  <?php foreach( $images as $image ): ?>
+	    <li>
+	      <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+	    </li>
+		<?php endforeach; ?>
+	    <!-- items mirrored twice, total of 12 -->
+	  </ul>
+	</div>
+	<div id="carousel" class="carousel">
+	  <ul class="slides">
+	    <?php foreach( $images as $image ): ?>
+	    <li>
+	      <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+	    </li>
+		<?php endforeach; ?>
+	  </ul>
+	</div>
+	<?php endif; ?>
+</section>
 
 
-<div id="thumbs">
+
+
+
  
-<!-- -->
+
 
 <?php if(get_field('location_gallery')): ?>          
 
 <?php while(has_sub_field('location_gallery')): ?>
 
-<div class="thumb1">
-	<a href="<?php the_sub_field("location_photo"); ?>" onclick="swap(this); return false;">
-		<img src="<?php the_sub_field("location_photo"); ?>" width="150" height="99" border="0" style="opacity: 0.4;" onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100" onmouseout="this.style.opacity=0.4;this.filters.alpha.opacity=40">
-	</a>
-</div>
 
 <?php endwhile; endif; ?>
-<!-- -->  
-</div>
-</div>                
 
-<?php endwhile; // end of the loop. ?>
-</div>  
+             
+
+
+
+</section>
 </div><!-- #content -->
         
  </div>
