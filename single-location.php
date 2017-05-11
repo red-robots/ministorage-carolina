@@ -13,7 +13,7 @@ get_header(); ?>
 <div class="wrapper">
 <div id="content" role="main">
 
-<?php while ( have_posts() ) : the_post(); 
+<?php if ( have_posts() ) : the_post(); 
 
 	$images = get_field('gallery');
 	$contactPhone = get_field('contact_phone');
@@ -23,7 +23,7 @@ get_header(); ?>
 	$spamer = antispambot($contactEmail);
 	$content = get_the_content();
 
-endwhile; // end of the loop. ?>
+?>
 	<div class="widget-area">
 		<div id="locations-dropdown">
 			<div id="dropdown-menu">	
@@ -31,19 +31,17 @@ endwhile; // end of the loop. ?>
 					<div id="locations-dropdown-header">VIEW ANOTHER LOCATION</div>
 					<ul>
 						<li class="main-li-width">Choose from our convenient locations
-						<?php $wp_query = new WP_Query();
-								$wp_query->query(array(
+						<?php $query = new WP_Query(array(
 								'post_type'=>'location',
 								'posts_per_page' => -1
 							)); ?>
 						<ul>
-							<?php while ($wp_query -> have_posts()) : $wp_query -> the_post(); ?>
+							<?php if($query->have_posts()): while ($query -> have_posts()) : $query -> the_post(); ?>
 								<li>
 									<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 								</li>
-							<?php endwhile;?>
+							<?php endwhile;	wp_reset_postdata(); endif;?>
 						</ul>
-						 <?php wp_reset_postdata(); ?>
 						</li>
 					</ul>
 				</nav>
@@ -67,15 +65,14 @@ endwhile; // end of the loop. ?>
 	<div class="contact-info"><?php the_field("address"); ?></div>
 
 	<h3>CONTACT</h3>
-	<div class="contact-info">
+	<div class="contact-info analytics">
+	
 	<?php 
-		
-
-		if($contactPhone) echo '<div class="item">p:'.$contactPhone.'</div>';
-		if($contactFax) echo '<div class="item">f:'.$contactFax.'</div>';
-		if($contactTollFree) echo '<div class="item">toll free:'.$contactTollFree.'</div>';
-		if($contactEmail) echo '<div class="item">e: <a href="'.$spamer.'">'.$spamer.'</a></div>';
-	 ?>
+	if($contactPhone) echo '<div class="item">p:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactPhone).'" class="label:'.preg_replace('/[^0-9]/',"",$contactPhone).' action:call cat:'.sanitize_title_with_dashes( get_the_title()).'">'.$contactPhone.'</a></div>';
+	if($contactFax) echo '<div class="item">f:'.$contactFax.'</div>';
+	if($contactTollFree) echo '<div class="item">toll free:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactTollFree).'>" class="label:'.preg_replace('/[^0-9]/',"",$contactTollFree).' action:toll cat:'.sanitize_title_with_dashes( get_the_title()).'">'.$contactTollFree.'</a></div>';
+	if($contactEmail) echo '<div class="item">e: <a href="mailto:'.$spamer.'" class="label:'.$spamer.' action:email cat:'.sanitize_title_with_dashes( get_the_title(  )).'">'.$spamer.'</a></div>';
+	?>
 	</div>
 
 	<h3>HOURS & ACCESS</h3>
@@ -293,25 +290,12 @@ if( ($amenity11) )
 	<?php endif; ?>
 </section>
 
-
-
-
-
- 
-
-
-<?php if(get_field('location_gallery')): ?>          
-
-<?php while(has_sub_field('location_gallery')): ?>
-
-
-<?php endwhile; endif; ?>
-
              
 
 
 
 </section>
+<?php endif; // end of the loop. ?>
 </div><!-- #content -->
         
  </div>

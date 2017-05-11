@@ -47,13 +47,13 @@ get_header(); ?>
 							<h3>ADDRESS</h3>
 							<?php the_field("address"); ?>
 						</div>
-						<div class="contact-info2 block">
+						<div class="contact-info2 analytics block">
 							<h3>CONTACT</h3>
 							<?php 
-							if($contactPhone) echo '<div class="item">p:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactPhone).'" class="label-phone cat-location'.get_the_ID().'">'.$contactPhone.'</a></div>';
+							if($contactPhone) echo '<div class="item">p:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactPhone).'" class="label:'.preg_replace('/[^0-9]/',"",$contactPhone).' action:call cat:'.sanitize_title_with_dashes( get_the_title()).'">'.$contactPhone.'</a></div>';
 							if($contactFax) echo '<div class="item">f:'.$contactFax.'</div>';
-							if($contactTollFree) echo '<div class="item">toll free:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactTollFree).'>" class="label-toll cat-location'. get_the_ID().'">'.$contactTollFree.'</a></div>';
-							if($contactEmail) echo '<div class="item email">e: <a href="'.$spamer.'" class="label-email cat-location<?php echo get_the_ID();?>">'.$spamer.'</a></div>';
+							if($contactTollFree) echo '<div class="item">toll free:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactTollFree).'>" class="label:'.preg_replace('/[^0-9]/',"",$contactTollFree).' action:toll cat:'.sanitize_title_with_dashes( get_the_title()).'">'.$contactTollFree.'</a></div>';
+							if($contactEmail) echo '<div class="item email">e: <a href="mailto:'.$spamer.'" class="label:'.$spamer.' action:email cat:'.sanitize_title_with_dashes( get_the_title(  )).'">'.$spamer.'</a></div>';
 							 ?>
 						</div>
 					</div>

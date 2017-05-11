@@ -47,7 +47,21 @@ get_header(); ?>
 	<div class="contact-info"><?php the_field("address"); ?></div>
 
 	<h3>CONTACT</h3>
-	<div class="contact-info"><?php the_field("contact"); ?></div>
+	<div class="contact-info analytics">
+	<?php 
+
+	$contactPhone = get_field('contact_phone');
+	$contactFax = get_field('contact_fax');
+	$contactTollFree = get_field('contact_toll_free');
+	$contactEmail = get_field('contact_email');
+	$spamer = antispambot($contactEmail);
+	if($contactPhone) echo '<div class="item">p:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactPhone).'" class="label:'.preg_replace('/[^0-9]/',"",$contactPhone).' action:call cat:'.sanitize_title_with_dashes( get_the_title()).'">'.$contactPhone.'</a></div>';
+	if($contactFax) echo '<div class="item">f:'.$contactFax.'</div>';
+	if($contactTollFree) echo '<div class="item">toll free:<a href="tel:'.preg_replace('/[^0-9]/',"",$contactTollFree).'>" class="label:'.preg_replace('/[^0-9]/',"",$contactTollFree).' action:toll cat:'.sanitize_title_with_dashes( get_the_title()).'">'.$contactTollFree.'</a></div>';
+	if($contactEmail) echo '<div class="item">e: <a href="mailto:'.$spamer.'" class="label:'.$spamer.' action:email cat:'.sanitize_title_with_dashes( get_the_title(  )).'">'.$spamer.'</a></div>';
+	?>
+	
+	</div>
 
 	<h3>HOURS & ACCESS</h3>
 	<div class="contact-info"><?php the_field("hours_access"); ?></div>
