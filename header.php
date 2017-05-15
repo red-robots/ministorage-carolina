@@ -37,8 +37,8 @@
 <link rel="manifest" href="<?php bloginfo('template_url'); ?>/images/favicons/manifest.json">
 <meta name="theme-color" content="#ffffff">
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 
 <?php the_field('google_analytics', 'option'); ?>
 
