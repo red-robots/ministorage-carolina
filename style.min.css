@@ -1526,7 +1526,7 @@ html[xmlns] .flexslider .slides{display:block}
 .wrapper{width:100%;margin:0 auto;padding:20px;position:relative;clear:both}
 @media screen and (min-width:600px){.wrapper{width:96%;padding:0}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
-}.nav-wrap{width:100%;float:left;position:relative;text-align:center}
+}.nav-wrap{width:100%;float:left;position:relative;text-align:center;z-index:1001}
 .content-area,.site-content{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area,.site-content{width:65.104166667%;float:left;margin:0}
 }@media screen and (min-width:1200px){}

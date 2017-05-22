@@ -9,6 +9,7 @@ get_header(); ?>
 
 <div class="wrapper">
 <!-- remember your content-area div -->
+  <div id="content" role="main">
 
   <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'page' ); ?>
@@ -30,7 +31,7 @@ get_header(); ?>
           <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
         </div>
         <div class="story-body">
-          <div class="img-wrap"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
+          <div class="img-wrap"><?php the_post_thumbnail( 'medium' ); ?></div>
           
           <div class="story-excerpt"><?php the_excerpt(); ?></div>
         </div>
@@ -42,11 +43,13 @@ get_header(); ?>
       <?php  endwhile; endif; wp_reset_postdata();  // close loop and reset the query ?>
     <!-- news -->
     </section> 
-</div>
 
+  </div> <!--content -->
+</div> <!--wrapper -->
 
 
 <div class="widget-area">
+  <?php wp_get_recent_posts( $args, $output ) ?>
 <!-- list recetn posts here -->
 </div>
 <?php get_footer(); ?>
