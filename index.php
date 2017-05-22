@@ -140,7 +140,9 @@ get_header(); ?>
 
 <div id="row3-left">
 <h2>Storage Locations</h2>
-
+  <div class="map">
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z7c8s7_q7uUo.k0vgc2Miq_FI" width="100%" height="350"></iframe> 
+  </div>
 <?php $wp_query = new WP_Query();
     $wp_query->query(array(
       'post_type'=>'location',
@@ -156,18 +158,46 @@ get_header(); ?>
 </div>
 
 <div id="row3-right">
+  <h2>Latest News</h2>
+
+<div class="stories">
 
 
+    <div id="news">
+      <ul>
+      <?php /* Second Custom Query pulling the post type, "announcements" */  
+      $args = array(
+        'post_type' => 'post', 
+        'posts_per_page' => '2'  
+      );
+      $query = new WP_Query( $args );  // Query all of your arguments from above
+      if (have_posts()) : while( $query->have_posts() ) : $query->the_post(); // the loop ?>
+    <div class="news-story">
+          <div class="story-title">
+          <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+        </div>
+        <div class="story-body">
+          <div class="img-wrap"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
+          
+          <div class="story-excerpt"><?php the_excerpt(); ?></div>
+        </div>
+        <div class="story-read">
+          <a href="<?php the_permalink() ?>">read more</a>
+        </div>
+        <div class="clear"></div>
+    </div>  
+      <?php  endwhile; endif; wp_reset_postdata();  // close loop and reset the query ?>
+      </ul>
+    </div>
+    <!-- news -->
+</div><!-- stories -->
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=z7c8s7_q7uUo.k0vgc2Miq_FI" width="100%" height="350"></iframe>  
-
-
+<div class="all-news-button">
+    <a href=" hhttps://ministoragecarolina.com/news/">All News</a>
+  </div>
 </div>
 
 
 </div>
-
-  
-
 
 <?php get_footer(); ?>

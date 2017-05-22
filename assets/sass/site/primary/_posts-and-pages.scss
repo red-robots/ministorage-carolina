@@ -594,6 +594,9 @@ section.boxes {
 	@media screen and (min-width: $deskwidth) {
 		
 	}
+	.map {
+		padding-bottom: 40px;
+	}
 
 	a {
 		color: #ffffff; 
@@ -624,10 +627,92 @@ section.boxes {
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 46%;
-		margin: 2%;
+		margin: 0 2%;
 		float: right;
-		padding-left: 3%;
-		border-left: 1px solid $color-electric-blue;
+	}
+
+	.all-news-button {
+		text-transform: uppercase;
+		text-align: center;
+		padding: 40px 20px;
+		a:link {
+    		color: red;
+    		padding: 10px;
+    		border-bottom: 1px solid red;
+			border-top: 1px solid red;
+			text-decoration: none;
+		}
+	}
+}
+.stories {
+	background-color: transparent;
+
+	a:visited { 
+    	color: inherit;
+	}
+	#news {
+		>ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.news-story-blog {
+		border-bottom: 1px #333 solid;
+	}
+	.news-story {
+		background-color: white;
+		padding: 20px;
+		border-radius: 10px;
+	}
+	.news-story,
+	.news-story-blog {
+		h1 {
+			padding-bottom: 20px;
+		}
+		margin-bottom: 20px;
+		color: black;
+		padding: 20px;
+	}
+	.story-title {
+		a:link {
+			text-decoration: none;
+			color: black;
+		}
+	}
+	.story-body {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		p {
+			margin: 0 0 15px 0;
+		}
+		.story-excerpt {
+			width: 65%;
+		}
+		.img-wrap {
+			width: 30%;
+		}
+
+	}
+
+	.story-read {
+		background-color: red;
+		text-align: center;
+		border-radius: 5px;
+		padding: 10px;
+		float: right;
+		a:link {
+			color: white;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 10px;
+		}
+		a:visited { 
+	    	color: white;
+		}
+	}
+	a:link {
+		color: red;
 	}
 }
 .children {
@@ -649,19 +734,19 @@ section.boxes {
 }
 
 #bg-body1 {
-		width: 100%;
-float: left;
-height: 100%;
-background-image:url(images/bg-body2.png);
-background-repeat: repeat-x;
-background-color: #ffffff;
+	width: 100%;
+	float: left;
+	height: 100%;
+	background-image:url(images/bg-body2.png);
+	background-repeat: repeat-x;
+	background-color: #ffffff;
 }
 
 
 #bg-body-home {
-		width: 100%;
-float: left;
-height: 100%;
+	width: 100%;
+	float: left;
+	height: 100%;
 	background-image:url(images/bg-body.jpg);
 	background-repeat: repeat-x;
 }

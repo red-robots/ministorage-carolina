@@ -553,7 +553,7 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */@font-face{font-family:'FontAwesome';src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0");src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0#iefix") format("embedded-opentype"),url("./fonts/font-awesome/fontawesome-webfont.woff2?v=4.5.0") format("woff2"),url("./fonts/font-awesome/fontawesome-webfont.woff?v=4.5.0") format("woff"),url("./fonts/font-awesome/fontawesome-webfont.ttf?v=4.5.0") format("truetype"),url("./fonts/font-awesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");font-weight:normal;font-style:normal}
-.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa{display:inline-block;font:normal normal normal 14px / 1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
 .fa-3x{font-size:3em}
@@ -1370,7 +1370,6 @@ body{background:#fff}
 blockquote,q{quotes:"" ""}
 blockquote:before,blockquote:after,q:before,q:after{content:""}
 hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}
-ul,ol{margin:0 0 1.5em 3em}
 ul{list-style:disc}
 ol{list-style:decimal}
 li>ul,li>ol{margin-bottom:0;margin-left:1.5em}
@@ -1700,13 +1699,32 @@ section.boxes .box .heading3{background-color:#005481}
 #row3 h2{color:#fff;font-family:'Raleway',sans-serif;font-size:32px;font-weight:normal;margin-bottom:30px}
 #row3-left{width:90%;margin:20px auto}
 @media screen and (min-width:600px){#row3-left{width:46%;margin:0 2%;float:left}
-}#row3-left a{color:#fff;text-decoration:underline}
+}#row3-left .map{padding-bottom:40px}
+#row3-left a{color:#fff;text-decoration:underline}
 #row3-left a:hover{color:#21759b}
 #row3-left ul{list-style-type:none;padding-left:0;margin-left:0;margin-top:0;columns:2;-webkit-columns:2;-moz-columns:2}
 #row3-left li{padding-left:0;margin-bottom:6px;display:inline-block;width:100%}
 #row3-right{width:90%;margin:20px auto}
-@media screen and (min-width:600px){#row3-right{width:46%;margin:2%;float:right;padding-left:3%;border-left:1px solid #1882b0}
-}.children{padding-left:20px}
+@media screen and (min-width:600px){#row3-right{width:46%;margin:0 2%;float:right}
+}#row3-right .all-news-button{text-transform:uppercase;text-align:center;padding:40px 20px}
+#row3-right .all-news-button a:link{color:red;padding:10px;border-bottom:1px solid red;border-top:1px solid red;text-decoration:none}
+.stories{background-color:transparent}
+.stories a:visited{color:inherit}
+.stories #news>ul{margin:0;padding:0}
+.stories .news-story-blog{border-bottom:1px #333 solid}
+.stories .news-story{background-color:white;padding:20px;border-radius:10px}
+.stories .news-story,.stories .news-story-blog{margin-bottom:20px;color:black;padding:20px}
+.stories .news-story h1,.stories .news-story-blog h1{padding-bottom:20px}
+.stories .story-title a:link{text-decoration:none;color:black}
+.stories .story-body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
+.stories .story-body p{margin:0 0 15px 0}
+.stories .story-body .story-excerpt{width:65%}
+.stories .story-body .img-wrap{width:30%}
+.stories .story-read{background-color:red;text-align:center;border-radius:5px;padding:10px;float:right}
+.stories .story-read a:link{color:white;text-transform:uppercase;text-decoration:none;padding:10px}
+.stories .story-read a:visited{color:white}
+.stories a:link{color:red}
+.children{padding-left:20px}
 #primary{padding-top:20px}
 #news{width:100%}
 #news li{padding-bottom:20px;margin-bottom:15px;border-bottom:1px solid silver}
