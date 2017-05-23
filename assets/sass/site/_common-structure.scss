@@ -48,11 +48,23 @@ div {
 		width: 26.041666667%;
 		float: right;
 		margin: 0;
+		padding: 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	a:link {
+		color: black;
+	}
+	a:visited {
+		color: inherit;
+	}
 }
+
 
 /* Logo */
 .logo , h1.logo {

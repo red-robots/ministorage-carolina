@@ -1531,8 +1531,11 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.content-area,.site-content{width:65.104166667%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
 .widget-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.widget-area{width:26.041666667%;float:right;margin:0}
+@media screen and (min-width:600px){.widget-area{width:26.041666667%;float:right;margin:0;padding:0}
 }@media screen and (min-width:1200px){}
+.widget-area ul{margin:0;padding:0}
+.widget-area a:link{color:black}
+.widget-area a:visited{color:inherit}
 .logo,h1.logo{width:282px;height:115px;background-image:url(images/logo.png);background-size:cover;margin:10px auto}
 @media screen and (min-width:600px){.logo,h1.logo{width:282px;height:115px;float:left;margin:20px 0 0 0}
 }@media screen and (min-width:1200px){}
@@ -1707,13 +1710,15 @@ section.boxes .box .heading3{background-color:#005481}
 #row3-right{width:90%;margin:20px auto}
 @media screen and (min-width:600px){#row3-right{width:46%;margin:0 2%;float:right}
 }#row3-right .all-news-button{text-transform:uppercase;text-align:center;padding:40px 20px}
-#row3-right .all-news-button a:link{color:red;padding:10px;border-bottom:1px solid red;border-top:1px solid red;text-decoration:none}
+#row3-right .all-news-button a{color:red;padding:10px;border-bottom:1px solid red;border-top:1px solid red;text-decoration:none}
+#row3-right .all-news-button a a:visited{color:inherit}
+.stories-blog{width:100%}
 .stories{background-color:transparent}
 .stories a:visited{color:inherit}
 .stories #news>ul{margin:0;padding:0}
-.stories .news-story-blog{border-bottom:1px #333 solid}
-.stories .news-story{background-color:white;padding:20px;border-radius:10px}
-.stories .news-story,.stories .news-story-blog{margin-bottom:20px;color:black;padding:20px}
+.stories .news-story{background-color:white;width:100%;padding:20px;border-radius:10px;padding:20px}
+.stories .news-story-blog{width:70%;float:left}
+.stories .news-story,.stories .news-story-blog{margin-bottom:20px;color:black;padding-bottom:20px;border-bottom:1px #333 solid}
 .stories .news-story h1,.stories .news-story-blog h1{padding-bottom:20px}
 .stories .story-title a:link{text-decoration:none;color:black}
 .stories .story-body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
@@ -1723,7 +1728,6 @@ section.boxes .box .heading3{background-color:#005481}
 .stories .story-read{background-color:red;text-align:center;border-radius:5px;padding:10px;float:right}
 .stories .story-read a:link{color:white;text-transform:uppercase;text-decoration:none;padding:10px}
 .stories .story-read a:visited{color:white}
-.stories a:link{color:red}
 .children{padding-left:20px}
 #primary{padding-top:20px}
 #news{width:100%}

@@ -175,29 +175,27 @@ get_header(); ?>
     <div class="news-story">
           <div class="story-title">
           <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-        </div>
+        </div><!--story-title -->
         <div class="story-body">
           <div class="img-wrap"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
           
           <div class="story-excerpt"><?php the_excerpt(); ?></div>
-        </div>
+        </div><!-- story-body -->
         <div class="story-read">
           <a href="<?php the_permalink() ?>">read more</a>
-        </div>
+        </div><!-- story-read -->
         <div class="clear"></div>
-    </div>  
+    </div>  <!--news-story -->
       <?php  endwhile; endif; wp_reset_postdata();  // close loop and reset the query ?>
       </ul>
-    </div>
-    <!-- news -->
+    </div><!-- news -->
 </div><!-- stories -->
 
 <div class="all-news-button">
-    <a href=" hhttps://ministoragecarolina.com/news/">All News</a>
-  </div>
-</div>
+    <a href="http://localhost:8888/ministorage/site/news/">All News</a>
+</div><!-- all-news-button -->
 
 
-</div>
+</div><!-- row3-right -->
 
 <?php get_footer(); ?>

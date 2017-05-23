@@ -8,15 +8,26 @@
 get_header(); ?>
 
 <div class="wrapper">
-<!-- remember your content-area div -->
   <div id="content" role="main">
 
   <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'page' ); ?>
   <?php endwhile; // end of the loop. ?>
 
- 
-    <section class="stories">
+  <div class="widget-area">
+  <h2>Recent Posts</h2>
+    <ul>
+    <?php
+      $recent_posts = wp_get_recent_posts();
+      foreach( $recent_posts as $recent ){
+        echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+      }
+      wp_reset_query();
+    ?>
+    </ul>
+</div> <!-- widget-area -->
+
+    <section class="stories stories-blog">
 
     
     <?php /* Second Custom Query pulling the post type, "announcements" */  
@@ -42,14 +53,9 @@ get_header(); ?>
     </div>  
       <?php  endwhile; endif; wp_reset_postdata();  // close loop and reset the query ?>
     <!-- news -->
-    </section> 
-
-  </div> <!--content -->
+  </section>
+</div> <!--content -->
 </div> <!--wrapper -->
 
 
-<div class="widget-area">
-  <?php wp_get_recent_posts( $args, $output ) ?>
-<!-- list recetn posts here -->
-</div>
 <?php get_footer(); ?>
