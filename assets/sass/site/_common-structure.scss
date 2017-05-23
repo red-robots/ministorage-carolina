@@ -54,14 +54,22 @@ div {
 		/*width: 1200px;*/
 	}
 	ul {
+		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
+	li {
+		line-height: 130%;
+	}
 	a:link {
 		color: black;
+		text-decoration: none;
 	}
 	a:visited {
 		color: inherit;
+	}
+	a:hover {
+    	color: green;
 	}
 }
 

@@ -670,8 +670,14 @@ section.boxes {
 		padding: 20px;
 	}
 	.news-story-blog {
+		width: 100%;
+		float: none;
+		display: block;
+		
+		@media screen and (min-width: $deskwidth) {
 		width: 70%;
 		float: left;
+		}
 	}
 	.news-story,
 	.news-story-blog {
