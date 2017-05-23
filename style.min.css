@@ -1720,13 +1720,14 @@ section.boxes .box .heading3{background-color:#005481}
 .stories #news>ul{margin:0;padding:0}
 .stories .news-story{background-color:white;width:100%;padding:20px;border-radius:10px;padding:20px}
 .stories .news-story-blog{width:100%;float:none;display:block}
-@media screen and (min-width:1200px){.stories .news-story-blog{width:70%;float:left}
+@media screen and (min-width:1200px){.stories .news-story-blog{width:62%;float:left}
 }.stories .news-story,.stories .news-story-blog{margin-bottom:20px;color:black;padding-bottom:20px;border-bottom:1px #333 solid}
 .stories .news-story h1,.stories .news-story-blog h1{padding-bottom:20px}
 .stories .story-title a:link{text-decoration:none;color:black}
 .stories .story-body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
 .stories .story-body p{margin:0 0 15px 0}
-.stories .story-body .story-excerpt{width:65%}
+.stories .story-body .story-excerpt.has{width:65%}
+.stories .story-body .story-excerpt.dont-have{width:100%}
 .stories .story-body .img-wrap{width:30%}
 .stories .story-read{background-color:red;text-align:center;border-radius:5px;padding:10px;float:right}
 .stories .story-read a:link{color:white;text-transform:uppercase;text-decoration:none;padding:10px}

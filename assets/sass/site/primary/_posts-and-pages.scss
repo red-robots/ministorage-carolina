@@ -675,7 +675,7 @@ section.boxes {
 		display: block;
 		
 		@media screen and (min-width: $deskwidth) {
-		width: 70%;
+		width: 62%;
 		float: left;
 		}
 	}
@@ -704,7 +704,13 @@ section.boxes {
 			margin: 0 0 15px 0;
 		}
 		.story-excerpt {
-			width: 65%;
+			&.has {
+				width: 65%;
+			}
+			&.dont-have {
+				width: 100%;
+			}
+			
 		}
 		.img-wrap {
 			width: 30%;

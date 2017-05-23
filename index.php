@@ -171,15 +171,25 @@ get_header(); ?>
         'posts_per_page' => '2'  
       );
       $query = new WP_Query( $args );  // Query all of your arguments from above
-      if (have_posts()) : while( $query->have_posts() ) : $query->the_post(); // the loop ?>
+      if (have_posts()) : while( $query->have_posts() ) : $query->the_post(); // the loop
+
+      if( has_post_thumbnail() ) {
+        $divClass = 'has';
+      } else {
+        $divClass = 'dont-have';
+      }
+
+       ?>
     <div class="news-story">
           <div class="story-title">
           <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
         </div><!--story-title -->
         <div class="story-body">
-          <div class="img-wrap"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
+          <?php if( has_post_thumbnail() ) { ?>
+            <div class="img-wrap"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
+          <?php } ?>
           
-          <div class="story-excerpt"><?php the_excerpt(); ?></div>
+          <div class="story-excerpt <?php echo $divClass; ?>"><?php the_excerpt(); ?></div>
         </div><!-- story-body -->
         <div class="story-read">
           <a href="<?php the_permalink() ?>">read more</a>
@@ -192,7 +202,7 @@ get_header(); ?>
 </div><!-- stories -->
 
 <div class="all-news-button">
-    <a href="http://localhost:8888/ministorage/site/news/">All News</a>
+    <a href="<?php bloginfo('url'); ?>/news/">All News</a>
 </div><!-- all-news-button -->
 
 
