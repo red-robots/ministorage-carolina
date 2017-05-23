@@ -79,12 +79,19 @@ get_header(); ?>
 			<!-- location info -->
 
 
-		<?php query_posts('category_name=uncategorized&showposts=20'); ?>
+		<?php
+			$wp_query = new WP_Query();
+			$wp_query->query(array(
+			'post_type'=>'location',
+			'posts_per_page' => -1
+		));
+			if ($wp_query->have_posts()) : ?>
+		    
 
 
 
 		<ul>
-			<?php while (have_posts()) : the_post(); ?>
+			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 				<li>
 					<div class="feature-title">
 						<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
@@ -214,7 +221,7 @@ get_header(); ?>
 			<?php endwhile;?>
 		</ul>
 	
-		 <?php wp_reset_postdata(); ?>
+		 <?php //wp_reset_postdata(); ?>
 
 			<?php if(get_field('property_row')): ?>          
 
@@ -239,7 +246,7 @@ get_header(); ?>
 				<div class="features1"><?php the_sub_field("additional_urls"); ?></div>
 				<div class="features1"><?php the_sub_field("other_amenity"); ?></div>
 
-			<?php endwhile; endif; ?>
+			<?php endwhile; endif; endif; ?>
 		</div>
 	 </section>           	    
 	</div><!-- #content -->
