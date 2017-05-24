@@ -28,23 +28,7 @@ get_header(); ?>
   <?php endwhile; // end of the loop. ?>
 
   
-    <div id="news">
-      <ul>
-      <?php /* Second Custom Query pulling the post type, "announcements" */  
-      $args = array(
-        'post_type' => 'post', 
-        'posts_per_page' => '2'  
-      );
-      $query = new WP_Query( $args );  // Query all of your arguments from above
-      if (have_posts()) : while( $query->have_posts() ) : $query->the_post(); // the loop ?>
-        <li>
-          <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-          <?php the_excerpt(); ?> 
-          <a href="<?php the_permalink() ?>">read more</a>
-        </li>
-      <?php  endwhile; endif; wp_reset_postdata();  // close loop and reset the query ?>
-      </ul>
-    </div><!-- news -->
+   
  
 
   <?php if(is_page( 'Events' ) ) { ?>
