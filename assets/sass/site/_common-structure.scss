@@ -62,14 +62,11 @@ div {
 		line-height: 130%;
 	}
 	a:link {
-		color: black;
+		color: #fff;
 		text-decoration: none;
 	}
-	a:visited {
-		color: inherit;
-	}
 	a:hover {
-    	color: green;
+    	color: $color-green;
 	}
 }
 
@@ -120,10 +117,10 @@ div {
 
 /* Header */
 .site-header {
-				padding-left: 0px;
-				padding-top: 0px;
-				padding-right: 0px;
-				padding-bottom: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
 }
 .site-header h1,
 .site-header h2 {
