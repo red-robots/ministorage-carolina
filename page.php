@@ -45,7 +45,7 @@ get_header(); ?>
       <?php  endwhile; endif; wp_reset_postdata();  // close loop and reset the query ?>
       </ul>
     </div><!-- news -->
-  <?php } ?> 
+ 
 
   <?php if(is_page( 'Events' ) ) { ?>
     <div id="news">
