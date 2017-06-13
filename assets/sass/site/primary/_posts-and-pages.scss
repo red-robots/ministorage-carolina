@@ -649,6 +649,10 @@ section.boxes {
 }
 .stories-blog {
 	width: 100%;
+	@media screen and (min-width: $deskwidth) {
+		width: 62%;
+		float: left;
+	}
 }
 .stories {
 	background-color: transparent;
@@ -674,10 +678,7 @@ section.boxes {
 		float: none;
 		display: block;
 		
-		@media screen and (min-width: $deskwidth) {
-		width: 62%;
-		float: left;
-		}
+		
 	}
 	.news-story,
 	.news-story-blog {
