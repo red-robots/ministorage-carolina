@@ -40,6 +40,7 @@
     [
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -53,6 +54,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -66,6 +68,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -79,6 +82,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -92,6 +96,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -105,6 +110,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Columbia",
@@ -117,6 +123,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "501 Mini Storage",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Conway",
@@ -130,6 +137,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "501 Mini Storage",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Conway",
@@ -143,6 +151,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "501 Mini Storage",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Conway",
@@ -156,6 +165,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "Garden City Self Storage",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Garden City",
@@ -169,6 +179,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "Garden City Storage",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Garden City",
@@ -182,6 +193,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "Garden City Storage",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Garden City",
@@ -195,6 +207,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "Coastal Storage & Retail",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Myrtle Beach",
@@ -208,6 +221,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Rock Hill",
@@ -221,6 +235,7 @@
         },
         {
             "@type": "LocalBusiness",
+            "name" : "The Mini Storage Center",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Spartanburg",
