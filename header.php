@@ -35,6 +35,7 @@
   "@type" : "Organization",
   "name" : "The Mini Storage Center",
   "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png",
+  "url" : "https://ministoragecarolina.com/",
   "department": 
     [
         {
@@ -217,7 +218,7 @@
             "email" : "sp@ministoragecarolina.com"
         },
     ],
-  "url" : "https://ministoragecarolina.com/",
+  
   
 }
 </script>
