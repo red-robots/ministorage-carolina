@@ -36,10 +36,10 @@
   "name" : "The Mini Storage Center",
   "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png",
   "url" : "https://ministoragecarolina.com/",
-  "department": 
+  "parentOrganization": 
     [
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -51,7 +51,7 @@
             "email" : "fd@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -63,7 +63,7 @@
             "email" : "sc@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -75,7 +75,7 @@
             "email" : "mr@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -87,7 +87,7 @@
             "email" : "sb@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Charlotte",
@@ -99,7 +99,7 @@
             "email" : "wb@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Columbia",
@@ -110,7 +110,7 @@
             "telephone" : "(803) 794-4228"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Conway",
@@ -122,7 +122,7 @@
             "email" : "501@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Conway",
@@ -134,7 +134,7 @@
             "email" : "501@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Conway",
@@ -146,7 +146,7 @@
             "email" : "501@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Garden City",
@@ -158,7 +158,7 @@
             "email" : "gc@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Garden City",
@@ -170,7 +170,7 @@
             "email" : "gc@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Garden City",
@@ -182,7 +182,7 @@
             "email" : "gc@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Myrtle Beach",
@@ -194,7 +194,7 @@
             "email" : "707@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Rock Hill",
@@ -206,7 +206,7 @@
             "email" : "rh@ministoragecarolina.com"
         },
         {
-            "@type": "Storage Center",
+            "@type": "LocalBusiness",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Spartanburg",
@@ -265,7 +265,7 @@
             </div>
           </div>
           <div id="header-text">
-            <h1>The Mini Storage Center</h1>
+            <h1>The Mini LocalBusiness</h1>
             Self-Storage Space For Individuals & Businesses
             <br>Convenient Locations in North Carolina & South Carolina
           </div>
