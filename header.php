@@ -216,8 +216,8 @@
             },
             "telephone" : "(864) 587-9515",
             "email" : "sp@ministoragecarolina.com"
-        },
-    ],
+        }
+    ]
   
   
 }
