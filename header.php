@@ -295,7 +295,7 @@
             </div>
           </div>
           <div id="header-text">
-            <h1>The Mini LocalBusiness</h1>
+            <h1>The Mini Storage Center</h1>
             Self-Storage Space For Individuals & Businesses
             <br>Convenient Locations in North Carolina & South Carolina
           </div>
