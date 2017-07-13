@@ -48,7 +48,8 @@
                 "streetAddress": "2318 Freedom Dr"
             },
             "telephone" : "(704) 393-1425",
-            "email" : "fd@ministoragecarolina.com"
+            "email" : "fd@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -60,7 +61,8 @@
                 "streetAddress": "1515 E. Sugar Creek Rd"
             },
             "telephone" : "(704) 375-7983",
-            "email" : "sc@ministoragecarolina.com"
+            "email" : "sc@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -72,7 +74,8 @@
                 "streetAddress": "4500 Monroe Rd"
             },
             "telephone" : "(704) 333-7064",
-            "email" : "mr@ministoragecarolina.com"
+            "email" : "mr@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -84,7 +87,8 @@
                 "streetAddress": "4475 South Blvd"
             },
             "telephone" : "(704) 523-1156",
-            "email" : "sb@ministoragecarolina.com"
+            "email" : "sb@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -96,7 +100,8 @@
                 "streetAddress": "700-A Westinghouse Blvd"
             },
             "telephone" : "(704) 588-3915",
-            "email" : "wb@ministoragecarolina.com"
+            "email" : "wb@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -107,7 +112,8 @@
                 "postalCode": "29169",
                 "streetAddress": "730 Chris Dr"
             },
-            "telephone" : "(803) 794-4228"
+            "telephone" : "(803) 794-4228",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -119,7 +125,8 @@
                 "streetAddress": "490 University Forest Dr"
             },
             "telephone" : "(843) 349-9800",
-            "email" : "501@ministoragecarolina.com"
+            "email" : "501@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -131,7 +138,8 @@
                 "streetAddress": "1488 Hwy 501"
             },
             "telephone" : "(843) 349-9800",
-            "email" : "501@ministoragecarolina.com"
+            "email" : "501@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -143,7 +151,8 @@
                 "streetAddress": "1480 Hwy 501 Bus"
             },
             "telephone" : "(843) 349-9800",
-            "email" : "501@ministoragecarolina.com"
+            "email" : "501@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -155,7 +164,8 @@
                 "streetAddress": "12053 Hwy 17 Bypass"
             },
             "telephone" : "(843) 651-0440",
-            "email" : "gc@ministoragecarolina.com"
+            "email" : "gc@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -167,7 +177,8 @@
                 "streetAddress": "605 Boundary Ave"
             },
             "telephone" : "(843) 651-0440",
-            "email" : "gc@ministoragecarolina.com"
+            "email" : "gc@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -179,7 +190,8 @@
                 "streetAddress": "565 Pine Ave"
             },
             "telephone" : "(843) 651-0440",
-            "email" : "gc@ministoragecarolina.com"
+            "email" : "gc@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -191,7 +203,8 @@
                 "streetAddress": "Coastal Storage & Retail"
             },
             "telephone" : "(843) 650-6802",
-            "email" : "707@ministoragecarolina.com"
+            "email" : "707@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -203,7 +216,8 @@
                 "streetAddress": "1370 Constitution Blvd"
             },
             "telephone" : "(803) 985-3660",
-            "email" : "rh@ministoragecarolina.com"
+            "email" : "rh@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         },
         {
             "@type": "LocalBusiness",
@@ -215,7 +229,8 @@
                 "streetAddress": "350 E. Blackstock Rd"
             },
             "telephone" : "(864) 587-9515",
-            "email" : "sp@ministoragecarolina.com"
+            "email" : "sp@ministoragecarolina.com",
+            "image" : "http://ministoragecarolina.com/bw/wp-content/themes/ministorage-carolina/images/logo.png"
         }
     ]
   
