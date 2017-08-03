@@ -1535,7 +1535,7 @@ html[xmlns] .flexslider .slides{display:block}
 }@media screen and (min-width:1200px){}
 .widget-area ul{list-style-type:none;margin:0;padding:0}
 .widget-area li{line-height:130%}
-.widget-area a:link{color:#fff;text-decoration:none}
+.widget-area a:link{color:#004e20;text-decoration:none}
 .widget-area a:hover{color:#004e20}
 .logo,h1.logo{width:282px;height:115px;background-image:url(images/logo.png);background-size:cover;margin:10px auto}
 @media screen and (min-width:600px){.logo,h1.logo{width:282px;height:115px;float:left;margin:20px 0 0 0}

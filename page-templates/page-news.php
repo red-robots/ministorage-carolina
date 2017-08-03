@@ -12,16 +12,23 @@ get_header(); ?>
 
   <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'page' ); ?>
-  <?php endwhile; // end of the loop. ?>
+  <?php endwhile; // end of the loop. 
+        wp_reset_postdata(); 
+        wp_reset_query();
+  ?>
 
     <section class="stories stories-blog">
-    <?php /* Second Custom Query pulling the post type, "announcements" */  
-      $args = array(
-        'post_type' => 'post', 
-        'posts_per_page' => '2'  
-      );
-      $query = new WP_Query( $args );  // Query all of your arguments from above
-      if (have_posts()) : while( $query->have_posts() ) : $query->the_post(); // the loop 
+ <?php
+  $wp_query = new WP_Query();
+  $wp_query->query(array(
+  'post_type'=>'post',
+  'posts_per_page' => 10,
+  'paged' => $paged,
+));
+  if ($wp_query->have_posts()) : ?>
+    <?php while ($wp_query->have_posts()) : ?>
+        
+    <?php $wp_query->the_post(); ?>
 
         if( has_post_thumbnail() ) {
           $divClass = 'has';
@@ -48,7 +55,18 @@ get_header(); ?>
           </div>
           <div class="clear"></div>
       </div>  
-      <?php  endwhile; endif; wp_reset_postdata();  // close loop and reset the query ?>
+      <?php  endwhile; ?>
+      <div class="clear"></div>
+      <?php
+      if(function_exists('pagi_posts_nav')){
+      //echo 'something';
+    }
+
+      pagi_posts_nav();
+ //previous_posts_link('&laquo; Newer posts');
+    //next_posts_link( 'Older posts &raquo;', $query->max_num_pages );
+      endif; wp_reset_postdata();  // close loop and reset the query 
+      ?>
     <!-- news -->
     </section>
 
