@@ -28,7 +28,7 @@ get_header(); ?>
   if ($wp_query->have_posts()) : ?>
     <?php while ($wp_query->have_posts()) : ?>
         
-    <?php $wp_query->the_post(); ?>
+    <?php $wp_query->the_post(); 
 
         if( has_post_thumbnail() ) {
           $divClass = 'has';
