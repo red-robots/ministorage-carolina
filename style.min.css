@@ -1768,14 +1768,16 @@ section.location-contact{width:100%;float:left;margin:20px auto}
 .contact-info{padding-bottom:10px;line-height:23px}
 .contact-info p{margin:0;padding:0}
 .contact-info2{width:100%;float:left}
-.unit-block{float:left;padding-bottom:15px;border-right:1px solid silver;width:100px;margin-bottom:10px}
-.unit-size{float:left;width:100%;border-bottom:1px solid silver;padding-bottom:5px;padding-left:8px;padding-right:8px}
+.unit-block{float:left;padding-bottom:15px;border-right:1px solid silver;width:28%;margin-bottom:20px}
+.unit-block:first-child{border-left:1px solid silver}
+@media screen and (min-width:600px){.unit-block{width:100px;margin-bottom:10px}
+}.unit-size{float:left;background-color:#eee;width:100%;border-bottom:1px solid silver;padding:5px 8px}
 .unit-price{float:left;width:100%;padding-top:5px;padding-right:8px;padding-left:8px}
 #partners h3{margin-top:10px}
 #partners ul{list-style-type:none;padding-left:0;margin-left:0;margin-top:10px;columns:4;-webkit-columns:4;-moz-columns:4}
 #partners li{padding-left:0;margin-bottom:5px;display:inline-block}
-#amenities-list ul{columns:3;-webkit-columns:3;-moz-columns:3;width:80%}
-#amenities-list li{background-image:url(images/bullet.png);background-repeat:no-repeat;background-position:left top;padding-left:25px;display:inline-block;margin-left:0;line-height:16px}
+@media screen and (min-width:600px){#amenities-list ul{columns:3;-webkit-columns:3;-moz-columns:3;width:80%}
+}#amenities-list li{background-image:url(images/bullet.png);background-repeat:no-repeat;background-position:left top;padding-left:25px;display:inline-block;margin-left:0;line-height:16px}
 #left-column{width:65%;float:left}
 .locations-list a:link{color:#208507 !important;font-weight:bold}
 .locations-list a:visited{color:#208507 !important;font-weight:bold}

@@ -997,18 +997,27 @@ section.location-map {
 	float: left;
 	padding-bottom: 15px;
 	border-right: 1px solid #c0c0c0;
-	width: 100px;
-	margin-bottom: 10px;
+	width: 28%;
+	margin-bottom: 20px;
+	&:first-child {
+		border-left: 1px solid #c0c0c0;
+	}
+	@media screen and (min-width: $tabwidth) {
+		width: 100px;
+		margin-bottom: 10px;
+	}
+	@media screen and (min-width: $deskwidth) {
+
+	}
 }
 
 .unit-size {
 	float: left;
-
+	background-color: #eee;
 	width: 100%;
-		border-bottom: 1px solid #c0c0c0;
-		padding-bottom: 5px;
-		padding-left: 8px;
-padding-right: 8px;
+	border-bottom: 1px solid #c0c0c0;
+	padding: 5px 8px;
+
 }
 
 .unit-price {
@@ -1054,10 +1063,13 @@ padding-right: 8px;
  
  
 #amenities-list ul {
- columns: 3;
+@media screen and (min-width: $tabwidth) {
+	columns: 3;
  -webkit-columns: 3;
     -moz-columns: 3;
 	width:80%;
+}
+ 
 }
 
 #amenities-list li {
