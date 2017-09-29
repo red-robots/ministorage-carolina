@@ -29,6 +29,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <!-- lw2 -->
+<script src="https://use.fontawesome.com/762c66dd2b.js"></script>
 <script type="application/ld+json">
 {
   "@context" : "http://schema.org",

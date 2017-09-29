@@ -334,7 +334,14 @@ div {
 		}
 	}
 }
-
+section.social {
+	li {
+		list-style: none;
+	}
+	i {
+		font-size: 30px;
+	}
+}
 #footer-bg {
 	width: 100%;
 	height: 100px;
