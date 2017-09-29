@@ -129,7 +129,11 @@ section.intro {
 /* =Menu 2
 -------------------------------------------------------------- */
 .main-li-width {
+	//display: none;
+	padding: 3%;
+	@media screen and (min-width: $tabwidth) {
 	width: 100%;
+	display: block;
 	// line-height: 36px;
 	background: {
 		image: url(images/dropdown-arrow.png);
@@ -138,6 +142,8 @@ section.intro {
 	}
 	font-size: 12px;
 	padding: 10px;
+	 }
+
 }
 #dropdown-text {
 	width: auto;
@@ -191,12 +197,17 @@ section.intro {
 	text-align: center;
 }
 #dropdown-menu nav ul ul {
-	display: none;
-	margin: 0;
-	padding: 0;
+	display: block;
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
 }
 #dropdown-menu nav ul li:hover > ul {
-	display: block;
+	@media screen and (min-width: $tabwidth) {
+		display: block;
+	}
 }
 #dropdown-menu nav ul {
 	background: #EDEDED; 
@@ -218,6 +229,7 @@ section.intro {
 	text-align: left;
 	margin: 0;
 	// padding-left: 10px;
+
 }
 #dropdown-menu nav ul li:hover {
 
@@ -229,18 +241,22 @@ section.intro {
 #dropdown-menu nav ul li a {
 	display: block;
 	color: #757575; text-decoration: none;
-	padding: 1%;
+	padding: 3%;
 }
 #dropdown-menu nav ul ul {
 	background: #5f6975; 
 	border-radius: 0px; 
 	padding: 0;
-	position: absolute; 
+	
 	top: 100%;
+	left: 0;
 	width: 100%;
 	// margin-left: -27px;
 	z-index: 5000;
 	margin: 0;
+	@media screen and (min-width: $tabwidth) {
+		position: absolute; 
+	}
 }
 #dropdown-menu nav ul ul li {
 	float: none; 
