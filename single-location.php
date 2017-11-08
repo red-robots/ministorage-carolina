@@ -233,6 +233,17 @@ if( ($amenity11) )
 
 <h3>UNIT SIZES & PRICING</h3>
 
+
+<?php 
+
+$iframe = get_field('iframe'); 
+
+if( $iframe != '') :
+
+echo $iframe;
+
+else:  ?>
+
 <?php if(get_field('size_pricing')): ?>          
 
 <?php while(has_sub_field('size_pricing')): ?>
@@ -241,7 +252,11 @@ if( ($amenity11) )
 <div class="unit-size"><?php the_sub_field("unit_size"); ?></div>
 <div class="unit-price"><?php the_sub_field("unit_price"); ?></div>
 </div>
-<?php endwhile; endif; ?>
+<?php endwhile; endif; 
+
+endif; 
+
+?>
 
 
 
@@ -249,11 +264,31 @@ if( ($amenity11) )
 
 <?php echo do_shortcode("[tabby title='Make A Reservation']"); ?>
 
-<?php the_field("make_a_reservation"); ?>
+<?php 
+$iframe_res = get_field('iframe_res'); 
+
+if( $iframe_res != '') :
+
+echo $iframe_res;
+
+else:  
+the_field("make_a_reservation"); 
+endif;
+?>
 
 <?php echo do_shortcode("[tabby title='Make A Payment']"); ?>
 
-<?php the_field("make_a_payment"); ?>
+<?php 
+$iframe_pay = get_field('iframe_pay'); 
+
+if( $iframe_pay != '') :
+
+echo $iframe_pay;
+
+else: 
+the_field("make_a_payment"); 
+endif;
+?>
 
 <?php echo do_shortcode("[tabby title='Special Savings']"); ?>
 
