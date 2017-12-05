@@ -29,7 +29,12 @@ function loginpage_custom_link() {
 add_filter('login_headerurl','loginpage_custom_link');
 
 
-
+function my_prefix_regenerate_thumbnail_quality() {
+    return 100;
+ 
+}
+ 
+add_filter( 'jpeg_quality', 'my_prefix_regenerate_thumbnail_quality');
 /*-------------------------------------
 	Adds Options page for ACF.
 ---------------------------------------*/
