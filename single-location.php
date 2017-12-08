@@ -297,7 +297,7 @@ endif;
 <?php echo do_shortcode("[tabbyending]"); ?>      
 
 
-<section class="gallery">
+<section class="gallery-photos">
 	<?php 
 
 	

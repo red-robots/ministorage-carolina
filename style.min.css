@@ -1764,6 +1764,7 @@ section.location-details .responsive-tabs .responsive-tabs__list__item{backgroun
 }@media screen and (min-width:1200px){section.location-details .responsive-tabs .responsive-tabs__list__item{font-size:14px;padding:10px 12px 10px;margin:1px 5px 0 0}
 }section.location-details .responsive-tabs .responsive-tabs__list__item:hover{color:#fff !important;background:#006f00 !important}
 section.location-details .responsive-tabs .responsive-tabs__list__item--active,section.location-details .responsive-tabs .responsive-tabs__list__item--active:hover{background:#006f00 !important;color:#fff !important}
+.gallery-photos{width:60%;margin:40px auto}
 section.location-details{width:100%;float:left;margin:30px auto}
 section.location-contact{width:100%;float:left;margin:20px auto}
 @media screen and (min-width:600px){section.location-contact{width:30%;margin:0 0 30px 0}
