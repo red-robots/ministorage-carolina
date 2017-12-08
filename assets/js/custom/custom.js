@@ -81,6 +81,7 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	$('.flexslider').flexslider({
 		animation: "slide",
+		smoothHeight: true
 	}); // end register flexslider
 	
 
